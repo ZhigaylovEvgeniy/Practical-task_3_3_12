@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Создайте класс Human
  * с полями возраст (age),
@@ -28,12 +30,26 @@
  */
 public class Test {
     public static void main(String[] args) {
-        Human human1 = new Human();
-        Human human2 = new Human((byte)61, "Николай", "Жигайлов", "Охота");
-        Human human3 = new Human((byte)61, "Ольга", "Жигайлова");
-        /*System.out.println(human1.age + "\n" + human1.name + "\n" + human1.secondName + "\n" + human1.favoriteSport);
-        System.out.println(human2.age + "\n" + human2.name + "\n" + human2.secondName + "\n" + human2.favoriteSport);
-        System.out.println(human3.age + "\n" + human3.name + "\n" + human3.secondName + "\n" + human3.favoriteSport);*/
+        for (;;) {
+            Scanner s = new Scanner(System.in);
+            System.out.println("Введите возрост:");
+            byte a = (byte) (Integer.parseInt(s.nextLine()));
+
+            System.out.println("Введите Имя:");
+            String n = s.nextLine();
+
+            System.out.println("Введите Фамилию:");
+            String sN = s.nextLine();
+
+            System.out.println("Введите любимый вид спорта:");
+            String fS = s.nextLine();
+
+            Human human2 = new Human(a, n, sN, fS);
+            System.out.println("\nВЫ ВВЕЛИ:\nВозрост:\t\t\t" + human2.age + "\nИмя:\t\t\t\t"
+                    + human2.name + "\nФамилия:\t\t\t"
+                    + human2.secondName + "\nЛюбимый вид спорта:\t"
+                    + human2.favoriteSport + "\n");
+        }
     }
 
 }
