@@ -64,10 +64,15 @@ class Human{
 
     }
 
-    public Human(byte age, String name, String secondName, String favoriteSport) {
+/*    public Human(byte age, String name, String secondName, String favoriteSport) {
         this.age = age;
         this.name = name;
         this.secondName = secondName;
+        this.favoriteSport = favoriteSport;
+    }*/
+
+    public Human(byte age, String name, String secondName, String favoriteSport) {
+        this(age, name, secondName);
         this.favoriteSport = favoriteSport;
     }
 
@@ -76,5 +81,6 @@ class Human{
         this.name = name;
         this.secondName = secondName;
     }
+
 
 }
